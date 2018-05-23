@@ -1,0 +1,40 @@
+
+{
+    "hmisApp": {
+        "profile" : {
+            "home": {
+                "title": "Profiles",
+                "createLabel": "Lisa uus Profile",
+                "createOrEditLabel": "Lisa või muuda Profile"
+            },
+            "created": "Uus Profile on loodud identifikaatoriga {{ param }}",
+            "updated": "Profile identifikaatoriga {{ param }} on muudetud",
+            "deleted": "Profile identifikaatoriga {{ param }} on kustutatud",
+            "delete": {
+                "question": "Kas olete kindel, et soovite kustutada Profile {{ id }}?"
+            },
+            "detail": {
+                "title": "Profile"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "mobileNo": "Mobile No",
+            "telephoneNo": "Telephone No",
+            "email": "Email",
+            "nidOrPassportNo": "Nid Or Passport No",
+            "address": "Address",
+            "gender": "Gender",
+            "religion": "Religion",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profileImage": "Profile Image",
+            "nidOrPassport": "Nid Or Passport",
+            "country": "Country",
+            "state": "State",
+            "city": "City",
+            "user": "User"
+        }
+    }
+}

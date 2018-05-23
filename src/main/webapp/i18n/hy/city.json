@@ -1,0 +1,31 @@
+
+{
+    "hmisApp": {
+        "city" : {
+            "home": {
+                "title": "Cities",
+                "createLabel": "Ստեղծել նոր City",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել City"
+            },
+            "created": "Նոր City ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "City թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "City հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել City {{ id }}?"
+            },
+            "detail": {
+                "title": "City"
+            },
+            "name": "Name",
+            "regionalName": "Regional Name",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "country": "Country",
+            "state": "State"
+        }
+    }
+}

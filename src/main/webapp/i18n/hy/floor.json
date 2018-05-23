@@ -1,0 +1,30 @@
+
+{
+    "hmisApp": {
+        "floor" : {
+            "home": {
+                "title": "Floors",
+                "createLabel": "Ստեղծել նոր Floor",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Floor"
+            },
+            "created": "Նոր Floor ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Floor թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Floor հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Floor {{ id }}?"
+            },
+            "detail": {
+                "title": "Floor"
+            },
+            "floorNo": "Floor No",
+            "totalFlat": "Total Flat",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House"
+        }
+    }
+}

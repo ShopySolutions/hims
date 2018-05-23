@@ -1,0 +1,70 @@
+<div>
+    <h2 data-translate="hmisApp.country.home.title">Countries</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="country.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="hmisApp.country.home.createLabel">
+                        Create new Country
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span data-translate="hmisApp.country.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="regionalName"><span data-translate="hmisApp.country.regionalName">Regional Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lat"><span data-translate="hmisApp.country.lat">Lat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lon"><span data-translate="hmisApp.country.lon">Lon</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="createdate"><span data-translate="hmisApp.country.createdate">Createdate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createby"><span data-translate="hmisApp.country.createby">Createby</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="updatedate"><span data-translate="hmisApp.country.updatedate">Updatedate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="updateby"><span data-translate="hmisApp.country.updateby">Updateby</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="country in vm.countries track by country.id">
+                    <td><a ui-sref="country-detail({id:country.id})">{{country.id}}</a></td>
+                    <td>{{country.name}}</td>
+                    <td>{{country.regionalName}}</td>
+                    <td>{{country.lat}}</td>
+                    <td>{{country.lon}}</td>
+                       <!-- <td>{{country.createdate | date:'mediumDate'}}</td>
+                    <td>{{country.createby}}</td>
+                        <td>{{country.updatedate | date:'mediumDate'}}</td>
+                    <td>{{country.updateby}}</td>-->
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="country-detail({id:country.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="country.edit({id:country.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="country.delete({id:country.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

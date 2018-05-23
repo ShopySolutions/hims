@@ -1,0 +1,38 @@
+
+{
+    "hmisApp": {
+        "house" : {
+            "home": {
+                "title": "Houses",
+                "createLabel": "Vytvořit House",
+                "createOrEditLabel": "Vytvořit nebo upravit House"
+            },
+            "created": "Byl vytvořen potomek entity House s identifikátorem {{ param }}",
+            "updated": "Potomek entity House s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity House s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat House {{ id }}?"
+            },
+            "detail": {
+                "title": "House"
+            },
+            "houseName": "House Name",
+            "houseNo": "House No",
+            "address": "Address",
+            "houseToFloorNo": "House To Floor No",
+            "ownToFloorNo": "Own To Floor No",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "image": "Image",
+            "country": "Country",
+            "state": "State",
+            "city": "City",
+            "profile": "Profile",
+            "user": "User"
+        }
+    }
+}

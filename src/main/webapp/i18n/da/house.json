@@ -1,0 +1,38 @@
+
+{
+    "hmisApp": {
+        "house" : {
+            "home": {
+                "title": "Houses",
+                "createLabel": "Create a new House",
+                "createOrEditLabel": "Create or edit a House"
+            },
+            "created": "A new House is created with identifier {{ param }}",
+            "updated": "A House is updated with identifier {{ param }}",
+            "deleted": "A House is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete House {{ id }}?"
+            },
+            "detail": {
+                "title": "House"
+            },
+            "houseName": "House Name",
+            "houseNo": "House No",
+            "address": "Address",
+            "houseToFloorNo": "House To Floor No",
+            "ownToFloorNo": "Own To Floor No",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "image": "Image",
+            "country": "Country",
+            "state": "State",
+            "city": "City",
+            "profile": "Profile",
+            "user": "User"
+        }
+    }
+}

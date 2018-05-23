@@ -1,0 +1,111 @@
+
+<div>
+    <h2><span data-translate="hmisApp.profile.detail.title">Profile</span> {{vm.profile.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+       <!-- <dt><span data-translate="hmisApp.profile.user">User</span></dt>
+        <dd>
+            {{vm.profile.user.login}}
+        </dd>-->
+        <dt><span data-translate="hmisApp.profile.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.profile.firstName}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.profile.lastName}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.profileImage">Profile Image</span></dt>
+        <dd>
+            <div ng-if="vm.profile.profileImage">
+                <a ng-click="vm.openFile(vm.profile.profileImageContentType, vm.profile.profileImage)">
+                    <img data-ng-src="{{'data:' + vm.profile.profileImageContentType + ';base64,' + vm.profile.profileImage}}" style="max-width: 100%;" alt="profile image"/>
+                </a>
+                {{vm.profile.profileImageContentType}}, {{vm.byteSize(vm.profile.profileImage)}}
+            </div>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.mobileNo">Mobile No</span></dt>
+        <dd>
+            <span>{{vm.profile.mobileNo}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.telephoneNo">Telephone No</span></dt>
+        <dd>
+            <span>{{vm.profile.telephoneNo}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.email">Email</span></dt>
+        <dd>
+            <span>{{vm.profile.email}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.gender">Gender</span></dt>
+        <dd>
+            <span>{{vm.profile.gender}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.religion">Religion</span></dt>
+        <dd>
+            <span>{{vm.profile.religion}}</span>
+        </dd>
+
+        <dt><span data-translate="hmisApp.profile.nidOrPassportNo">Nid Or Passport No</span></dt>
+        <dd>
+            <span>{{vm.profile.nidOrPassportNo}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.nidOrPassport">Nid Or Passport</span></dt>
+        <dd>
+            <div ng-if="vm.profile.nidOrPassport">
+                <a ng-click="vm.openFile(vm.profile.nidOrPassportContentType, vm.profile.nidOrPassport)">
+                    <img data-ng-src="{{'data:' + vm.profile.nidOrPassportContentType + ';base64,' + vm.profile.nidOrPassport}}" style="max-width: 100%;" alt="profile image"/>
+                </a>
+                {{vm.profile.nidOrPassportContentType}}, {{vm.byteSize(vm.profile.nidOrPassport)}}
+            </div>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.address">Address</span></dt>
+        <dd>
+            <span>{{vm.profile.address}}</span>
+        </dd>
+
+        <!--<dt><span data-translate="hmisApp.profile.createdate">Createdate</span></dt>
+        <dd>
+            <span>{{vm.profile.createdate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.profile.createBy}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.updateDate">Update Date</span></dt>
+        <dd>
+            <span>{{vm.profile.updateDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{vm.profile.updateBy}}</span>
+        </dd>-->
+
+
+        <dt><span data-translate="hmisApp.profile.country">Country</span></dt>
+        <dd>
+            <a ui-sref="country-detail({id:vm.profile.country.id})">{{vm.profile.country.name}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.state">State</span></dt>
+        <dd>
+            <a ui-sref="state-detail({id:vm.profile.state.id})">{{vm.profile.state.name}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.profile.city">City</span></dt>
+        <dd>
+            <a ui-sref="city-detail({id:vm.profile.city.id})">{{vm.profile.city.name}}</a>
+        </dd>
+
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="profile-detail.edit({id:vm.profile.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+
+</div>

@@ -1,0 +1,30 @@
+
+{
+    "hmisApp": {
+        "floor" : {
+            "home": {
+                "title": "Floors",
+                "createLabel": "Vytvořit Floor",
+                "createOrEditLabel": "Vytvořit nebo upravit Floor"
+            },
+            "created": "Byl vytvořen potomek entity Floor s identifikátorem {{ param }}",
+            "updated": "Potomek entity Floor s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Floor s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Floor {{ id }}?"
+            },
+            "detail": {
+                "title": "Floor"
+            },
+            "floorNo": "Floor No",
+            "totalFlat": "Total Flat",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House"
+        }
+    }
+}

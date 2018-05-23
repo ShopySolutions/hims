@@ -1,0 +1,79 @@
+
+<div>
+    <h2><span data-translate="hmisApp.billing.detail.title">Billing</span> {{vm.billing.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="hmisApp.billing.flatFair">Flat Fair</span></dt>
+        <dd>
+            <span>{{vm.billing.flatFair}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.billing.electricityBill">Electricity Bill</span></dt>
+        <dd>
+            <span>{{vm.billing.electricityBill}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.billing.gasBill">Gas Bill</span></dt>
+        <dd>
+            <span>{{vm.billing.gasBill}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.billing.internetBill">Internet Bill</span></dt>
+        <dd>
+            <span>{{vm.billing.internetBill}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.billing.transactionId">Transaction Id</span></dt>
+        <dd>
+            <span>{{vm.billing.transactionId}}</span>
+        </dd>
+        <!--<dt><span data-translate="hmisApp.billing.createdate">Createdate</span></dt>
+        <dd>
+            <span>{{vm.billing.createdate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.billing.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.billing.createBy}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.billing.updateDate">Update Date</span></dt>
+        <dd>
+            <span>{{vm.billing.updateDate | date:'mediumDate'}}</span>
+        </dd>-->
+        <!--<dt><span data-translate="hmisApp.billing.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{vm.billing.updateBy}}</span>
+        </dd>-->
+        <!--<dt><span data-translate="hmisApp.billing.profile">Profile</span></dt>
+        <dd>
+            <a ui-sref="profile-detail({id:vm.billing.profile.id})">{{vm.billing.profile.firstName}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.billing.user">User</span></dt>
+        <dd>
+            {{vm.billing.user.login}}
+        </dd>-->
+        <dt><span data-translate="hmisApp.billing.house">House</span></dt>
+        <dd>
+            <a ui-sref="house-detail({id:vm.billing.house.id})">{{vm.billing.house.houseName}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.billing.floor">Floor</span></dt>
+        <dd>
+            <a ui-sref="floor-detail({id:vm.billing.floor.id})">{{vm.billing.floor.floorNo}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.billing.flat">Flat</span></dt>
+        <dd>
+            <a ui-sref="flat-detail({id:vm.billing.flat.id})">{{vm.billing.flat.flatNameOrNo}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.billing.rent">Rent</span></dt>
+        <dd>
+            <a ui-sref="rent-detail({id:vm.billing.rent.id})">{{vm.billing.rent.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="billing-detail.edit({id:vm.billing.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

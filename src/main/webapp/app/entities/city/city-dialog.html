@@ -1,0 +1,153 @@
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title" id="myCityLabel" data-translate="hmisApp.city.home.createOrEditLabel">Create or edit a
+            City</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <!--<div class="form-group" ng-show="vm.city.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.city.id" readonly />
+        </div>-->
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label data-translate="hmisApp.city.country" for="field_country">Country</label>
+                <select  class="form-control js-example-basic-single" id="field_country" name="country"
+                        ng-model="vm.city.country"
+                        ng-change="getStateByCountry(vm.city.country.id)"
+                        ng-options="country as country.name for country in vm.countries track by country.id" required>
+                </select>
+                <!--<div ng-show="editForm.country.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.country.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label data-translate="hmisApp.city.state" for="field_state">State</label>
+                <select class="form-control js-example-basic-single" id="field_state" name="state"
+                        ng-model="vm.city.state"
+                        ng-disabled="!(vm.city.country)"
+                        ng-options="state as state.name for state in vm.states track by state.id" required>
+                </select>
+                <!--<div ng-show="editForm.state.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.state.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.city.name" for="field_name">Name</label>
+                <input type="text" class="form-control" name="name" id="field_name"
+                       ng-model="vm.city.name"
+                       required/>
+                <!--<div ng-show="editForm.name.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.city.regionalName" for="field_regionalName">Regional
+                    Name</label>
+                <input type="text" class="form-control" name="regionalName" id="field_regionalName"
+                       ng-model="vm.city.regionalName"/>
+            </div>
+        </div>
+
+
+
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.city.lat" for="field_lat">Lat</label>
+                <input type="text" class="form-control" name="lat" id="field_lat"
+                       ng-model="vm.city.lat"
+                />
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.city.lon" for="field_lon">Lon</label>
+                <input type="text" class="form-control" name="lon" id="field_lon"
+                       ng-model="vm.city.lon"
+                />
+            </div>
+        </div>
+        <!--  <div class="form-group">
+
+              <label class="control-label" data-translate="hmisApp.city.createdate" for="field_createdate">Createdate</label>
+                  <div class="input-group">
+                      <input id="field_createdate" type="text" class="form-control" name="createdate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.city.createdate" is-open="vm.datePickerOpenStatus.createdate"
+                      />
+                      <span class="input-group-btn">
+                          <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+                  </div>
+          </div>-->
+        <!-- <div class="form-group">
+             <label class="control-label" data-translate="hmisApp.city.createBy" for="field_createBy">Create By</label>
+             <input type="number" class="form-control" name="createBy" id="field_createBy"
+                     ng-model="vm.city.createBy"
+                     />
+         </div>-->
+        <!-- <div class="form-group">
+             <label class="control-label" data-translate="hmisApp.city.updateDate" for="field_updateDate">Update Date</label>
+                 <div class="input-group">
+                     <input id="field_updateDate" type="text" class="form-control" name="updateDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.city.updateDate" is-open="vm.datePickerOpenStatus.updateDate"
+                     />
+                     <span class="input-group-btn">
+                         <button type="button" class="btn btn-default" ng-click="vm.openCalendar('updateDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                     </span>
+                 </div>
+         </div>-->
+        <!--<div class="form-group">
+            <label class="control-label" data-translate="hmisApp.city.updateBy" for="field_updateBy">Update By</label>
+            <input type="number" class="form-control" name="updateBy" id="field_updateBy"
+                    ng-model="vm.city.updateBy"
+                    />
+        </div>-->
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <h6 class="control-label" translate="hmisApp.city.status">Status</h6>
+                <div>
+                    <label class="radio-inline btn btn-default"><input type="radio" name="status" value="true"
+                                                                       ng-checked="(vm.city.status == true || vm.city.status == null)"
+                                                                       ng-model="vm.city.status"><span
+                        translate="entity.action.active">Active</span></label>&nbsp;&nbsp;
+
+                    <label class="radio-inline btn btn-default"><input type="radio" name="status" value="false"
+                                                                       ng-checked="vm.city.status == false && vm.city.status != null"
+                                                                       ng-model="vm.city.status"><span
+                        translate="entity.action.deactivate">Deactive</span></label>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span
+            data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

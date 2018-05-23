@@ -1,0 +1,42 @@
+
+{
+    "hmisApp": {
+        "flat" : {
+            "home": {
+                "title": "Flats",
+                "createLabel": "Create a new Flat",
+                "createOrEditLabel": "Create or edit a Flat"
+            },
+            "created": "A new Flat is created with identifier {{ param }}",
+            "updated": "A Flat is updated with identifier {{ param }}",
+            "deleted": "A Flat is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Flat {{ id }}?"
+            },
+            "detail": {
+                "title": "Flat"
+            },
+            "flatNameOrNo": "Flat Name Or No",
+            "flatSize": "Flat Size",
+            "totalBedRoom": "Total Bed Room",
+            "drawDinDraCumDin": "Draw Din Dra Cum Din",
+            "totalWashroom": "Total Washroom",
+            "kitchen": "Kitchen",
+            "totalBelcony": "Total Belcony",
+            "storeRoom": "Store Room",
+            "floorType": "Floor Type",
+            "flatFair": "Flat Fair",
+            "serviceCharge": "Service Charge",
+            "totalFair": "Total Fair",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor",
+            "status": "Status"
+        }
+    }
+}

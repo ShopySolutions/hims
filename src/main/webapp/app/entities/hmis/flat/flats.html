@@ -1,0 +1,102 @@
+<div>
+    <h2 data-translate="hmisApp.flat.home.title">Flats</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="flat.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="hmisApp.flat.home.createLabel">
+                        Create new Flat
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="flatNameOrNo"><span data-translate="hmisApp.flat.flatNameOrNo">Flat Name Or No</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="flatSize"><span data-translate="hmisApp.flat.flatSize">Flat Size</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="totalBedRoom"><span data-translate="hmisApp.flat.totalBedRoom">Total Bed Room</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="drawDinDraCumDin"><span data-translate="hmisApp.flat.drawDinDraCumDin">Draw Din Dra Cum Din</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="totalWashroom"><span data-translate="hmisApp.flat.totalWashroom">Total Washroom</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="kitchen"><span data-translate="hmisApp.flat.kitchen">Kitchen</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="totalBelcony"><span data-translate="hmisApp.flat.totalBelcony">Total Belcony</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="storeRoom"><span data-translate="hmisApp.flat.storeRoom">Store Room</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="floorType"><span data-translate="hmisApp.flat.floorType">Floor Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="flatFair"><span data-translate="hmisApp.flat.flatFair">Flat Fair</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="serviceCharge"><span data-translate="hmisApp.flat.serviceCharge">Service Charge</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="totalFair"><span data-translate="hmisApp.flat.totalFair">Total Fair</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="createdate"><span data-translate="hmisApp.flat.createdate">Createdate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createBy"><span data-translate="hmisApp.flat.createBy">Create By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="updateDate"><span data-translate="hmisApp.flat.updateDate">Update Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="updateBy"><span data-translate="hmisApp.flat.updateBy">Update By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="profile.firstName"><span data-translate="hmisApp.flat.profile">Profile</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="user.login"><span data-translate="hmisApp.flat.user">User</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <th jh-sort-by="house.houseName"><span data-translate="hmisApp.flat.house">House</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="floor.floorNo"><span data-translate="hmisApp.flat.floor">Floor</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="flat in vm.flats track by flat.id">
+                    <td><a ui-sref="flat-detail({id:flat.id})">{{$index+1}}</a></td>
+                    <td>{{flat.flatNameOrNo}}</td>
+                    <td>{{flat.flatSize}}</td>
+                    <td>{{flat.totalBedRoom}}</td>
+                    <td>{{flat.drawDinDraCumDin}}</td>
+                    <td>{{flat.totalWashroom}}</td>
+                    <td>{{flat.kitchen}}</td>
+                    <td>{{flat.totalBelcony}}</td>
+                    <td>{{flat.storeRoom}}</td>
+                    <td>{{flat.floorType}}</td>
+                    <td>{{flat.flatFair}}</td>
+                    <td>{{flat.serviceCharge}}</td>
+                    <td>{{flat.totalFair}}</td>
+                        <!--<td>{{flat.createdate | date:'mediumDate'}}</td>
+                    <td>{{flat.createBy}}</td>
+                        <td>{{flat.updateDate | date:'mediumDate'}}</td>
+                    <td>{{flat.updateBy}}</td>-->
+                    <!--<td>
+                        <a ui-sref="profile-detail({id:flat.profile.id})">{{flat.profile.firstName}}</a>
+                    </td>
+                    <td>
+                        {{flat.user.login}}
+                    </td>-->
+                    <td>
+                        <a ui-sref="house-detail({id:flat.house.id})">{{flat.house.houseName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="floor-detail({id:flat.floor.id})">{{flat.floor.floorNo}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="flat-detail({id:flat.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="flat.edit({id:flat.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="flat.delete({id:flat.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

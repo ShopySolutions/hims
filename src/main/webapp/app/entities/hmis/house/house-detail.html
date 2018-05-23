@@ -1,0 +1,92 @@
+
+<div>
+    <h2><span data-translate="hmisApp.house.detail.title">House</span> {{vm.house.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="hmisApp.house.houseName">House Name</span></dt>
+        <dd>
+            <span>{{vm.house.houseName}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.house.houseNo">House No</span></dt>
+        <dd>
+            <span>{{vm.house.houseNo}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.house.address">Address</span></dt>
+        <dd>
+            <span>{{vm.house.address}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.house.houseToFloorNo">House To Floor No</span></dt>
+        <dd>
+            <span>{{vm.house.houseToFloorNo}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.house.ownToFloorNo">Own To Floor No</span></dt>
+        <dd>
+            <span>{{vm.house.ownToFloorNo}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.house.lat">Lat</span></dt>
+        <dd>
+            <span>{{vm.house.lat}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.house.lon">Lon</span></dt>
+        <dd>
+            <span>{{vm.house.lon}}</span>
+        </dd>
+        <!--<dt><span data-translate="hmisApp.house.createdate">Createdate</span></dt>
+        <dd>
+            <span>{{vm.house.createdate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.house.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.house.createBy}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.house.updateDate">Update Date</span></dt>
+        <dd>
+            <span>{{vm.house.updateDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.house.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{vm.house.updateBy}}</span>
+        </dd>-->
+        <dt><span data-translate="hmisApp.house.image">Image</span></dt>
+        <dd>
+            <div ng-if="vm.house.image">
+                <a ng-click="vm.openFile(vm.house.imageContentType, vm.house.image)">
+                    <img data-ng-src="{{'data:' + vm.house.imageContentType + ';base64,' + vm.house.image}}" style="max-width: 100%;" alt="house image"/>
+                </a>
+                {{vm.house.imageContentType}}, {{vm.byteSize(vm.house.image)}}
+            </div>
+        </dd>
+        <dt><span data-translate="hmisApp.house.country">Country</span></dt>
+        <dd>
+            <a ui-sref="country-detail({id:vm.house.country.id})">{{vm.house.country.name}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.house.state">State</span></dt>
+        <dd>
+            <a ui-sref="state-detail({id:vm.house.state.id})">{{vm.house.state.name}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.house.city">City</span></dt>
+        <dd>
+            <a ui-sref="city-detail({id:vm.house.city.id})">{{vm.house.city.name}}</a>
+        </dd>
+        <!--<dt><span data-translate="hmisApp.house.profile">Profile</span></dt>
+        <dd>
+            <a ui-sref="profile-detail({id:vm.house.profile.id})">{{vm.house.profile.firstName}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.house.user">User</span></dt>
+        <dd>
+            {{vm.house.user.login}}
+        </dd>-->
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="house-detail.edit({id:vm.house.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

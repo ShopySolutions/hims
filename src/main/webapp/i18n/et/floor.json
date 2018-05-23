@@ -1,0 +1,30 @@
+
+{
+    "hmisApp": {
+        "floor" : {
+            "home": {
+                "title": "Floors",
+                "createLabel": "Lisa uus Floor",
+                "createOrEditLabel": "Lisa või muuda Floor"
+            },
+            "created": "Uus Floor on loodud identifikaatoriga {{ param }}",
+            "updated": "Floor identifikaatoriga {{ param }} on muudetud",
+            "deleted": "Floor identifikaatoriga {{ param }} on kustutatud",
+            "delete": {
+                "question": "Kas olete kindel, et soovite kustutada Floor {{ id }}?"
+            },
+            "detail": {
+                "title": "Floor"
+            },
+            "floorNo": "Floor No",
+            "totalFlat": "Total Flat",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House"
+        }
+    }
+}

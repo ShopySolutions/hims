@@ -1,0 +1,31 @@
+
+{
+    "hmisApp": {
+        "city" : {
+            "home": {
+                "title": "Cities",
+                "createLabel": "Lisa uus City",
+                "createOrEditLabel": "Lisa või muuda City"
+            },
+            "created": "Uus City on loodud identifikaatoriga {{ param }}",
+            "updated": "City identifikaatoriga {{ param }} on muudetud",
+            "deleted": "City identifikaatoriga {{ param }} on kustutatud",
+            "delete": {
+                "question": "Kas olete kindel, et soovite kustutada City {{ id }}?"
+            },
+            "detail": {
+                "title": "City"
+            },
+            "name": "Name",
+            "regionalName": "Regional Name",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "country": "Country",
+            "state": "State"
+        }
+    }
+}

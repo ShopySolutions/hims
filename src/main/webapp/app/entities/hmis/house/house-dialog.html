@@ -1,0 +1,266 @@
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title" id="myHouseLabel" data-translate="hmisApp.house.home.createOrEditLabel">Create or edit a
+            House</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <!--<div class="form-group" ng-show="vm.house.id">-->
+        <!--<label for="id" data-translate="global.field.id">ID</label>-->
+        <!--<input type="text" class="form-control" id="id" name="id"-->
+        <!--ng-model="vm.house.id" readonly />-->
+        <!--</div>-->
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.house.houseNo" for="field_houseNo">House No</label>
+                <input type="text" class="form-control" name="houseNo" id="field_houseNo"
+                       ng-model="vm.house.houseNo"
+                       required/>
+                <!--<div ng-show="editForm.houseNo.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.houseNo.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.house.houseName" for="field_houseName">House
+                    Name</label>
+                <input type="text" class="form-control" name="houseName" id="field_houseName"
+                       ng-model="vm.house.houseName"
+                       required/>
+                <!--<div ng-show="editForm.houseName.$invalid">
+                    <p class="help-block"
+                        ng-show="editForm.houseName.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.house.address" for="field_address">Address</label>
+                <input type="text" class="form-control" name="address" id="field_address"
+                       ng-model="vm.house.address"
+                       required/>
+                <!--<div ng-show="editForm.address.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.address.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.house.houseToFloorNo" for="field_houseToFloorNo">House
+                    To Floor No</label>
+                <input type="number" class="form-control" name="houseToFloorNo" id="field_houseToFloorNo"
+                       ng-model="vm.house.houseToFloorNo"
+                       required/>
+                <div ng-show="editForm.houseToFloorNo.$invalid">
+                    <!-- <p class="help-block"
+                        ng-show="editForm.houseToFloorNo.$error.required" data-translate="entity.validation.required">
+                         This field is required.
+                     </p>-->
+                    <p class="help-block"
+                       ng-show="editForm.houseToFloorNo.$error.number" data-translate="entity.validation.number">
+                        This field should be a number.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.house.ownToFloorNo" for="field_ownToFloorNo">Own To
+                    Floor No</label>
+                <input type="number" class="form-control" name="ownToFloorNo" id="field_ownToFloorNo"
+                       ng-model="vm.house.ownToFloorNo"
+                       required/>
+                <div ng-show="editForm.ownToFloorNo.$invalid">
+                    <!--<p class="help-block"
+                       ng-show="editForm.ownToFloorNo.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>-->
+                    <p class="help-block"
+                       ng-show="editForm.ownToFloorNo.$error.number" data-translate="entity.validation.number">
+                        This field should be a number.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.house.lat" for="field_lat">Lat</label>
+                <input type="text" class="form-control" name="lat" id="field_lat"
+                       ng-model="vm.house.lat"
+                />
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.house.lon" for="field_lon">Lon</label>
+                <input type="text" class="form-control" name="lon" id="field_lon"
+                       ng-model="vm.house.lon"
+                />
+            </div>
+        </div>
+        <!--<div class="form-group">
+            <label class="control-label" data-translate="hmisApp.house.createdate" for="field_createdate">Createdate</label>
+                <div class="input-group">
+                    <input id="field_createdate" type="text" class="form-control" name="createdate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.house.createdate" is-open="vm.datePickerOpenStatus.createdate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="hmisApp.house.createBy" for="field_createBy">Create By</label>
+            <input type="number" class="form-control" name="createBy" id="field_createBy"
+                    ng-model="vm.house.createBy"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="hmisApp.house.updateDate" for="field_updateDate">Update Date</label>
+                <div class="input-group">
+                    <input id="field_updateDate" type="text" class="form-control" name="updateDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.house.updateDate" is-open="vm.datePickerOpenStatus.updateDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('updateDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="hmisApp.house.updateBy" for="field_updateBy">Update By</label>
+            <input type="number" class="form-control" name="updateBy" id="field_updateBy"
+                    ng-model="vm.house.updateBy"
+                    />
+        </div>-->
+        <div class="form-group col-sm-6">
+            <div class="form-group" ngf-drop ngf-change="vm.setImage($file, vm.house)" ngf-pattern="'image/*'">
+                <label class="control-label" data-translate="hmisApp.house.image" for="field_image">Image</label>
+                <div>
+                    <img data-ng-src="{{'data:' + vm.house.imageContentType + ';base64,' + vm.house.image}}"
+                         style="max-height: 100px;" ng-if="vm.house.image" alt="house image"/>
+                    <div ng-if="vm.house.image" class="help-block clearfix">
+                        <span class="pull-left">{{vm.house.imageContentType}}, {{vm.byteSize(vm.house.image)}}</span>
+                        <button type="button" ng-click="vm.house.image=null;vm.house.imageContentType=null;"
+                                class="btn btn-default btn-xs pull-right">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                    <button type="button" ngf-select class="btn btn-default btn-block"
+                            ngf-change="vm.setImage($file, vm.house)" accept="image/*"
+                            data-translate="entity.action.addimage">
+                        Add image
+                    </button>
+                </div>
+                <input type="hidden" class="form-control" name="image" id="field_image"
+                       ng-model="vm.house.image"
+                />
+                <input type="hidden" class="form-control" name="imageContentType" id="field_imageContentType"
+                       ng-model="vm.house.imageContentType"/>
+            </div>
+        </div>
+
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label data-translate="hmisApp.house.country" for="field_country">Country</label>
+                <select class="form-control" id="field_country" name="country" ng-model="vm.house.country"
+                        ng-options="country as country.name for country in vm.countries track by country.id" required>
+                </select>
+                <!--<div ng-show="editForm.country.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.country.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label data-translate="hmisApp.house.state" for="field_state">State</label>
+                <select class="form-control" id="field_state" name="state" ng-model="vm.house.state"
+                        ng-options="state as state.name for state in vm.states track by state.id" required>
+                </select>
+                <!--<div ng-show="editForm.state.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.state.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label data-translate="hmisApp.house.city" for="field_city">City</label>
+                <select class="form-control" id="field_city" name="city" ng-model="vm.house.city"
+                        ng-options="city as city.name for city in vm.cities track by city.id" required>
+                </select>
+                <!-- <div ng-show="editForm.city.$invalid">
+                     <p class="help-block"
+                        ng-show="editForm.city.$error.required" data-translate="entity.validation.required">
+                         This field is required.
+                     </p>
+                 </div>-->
+            </div>
+        </div>
+        <!--<div class="form-group">
+            <label data-translate="hmisApp.house.profile" for="field_profile">Profile</label>
+            <select class="form-control" id="field_profile" name="profile" ng-model="vm.house.profile" ng-options="profile as profile.firstName for profile in vm.profiles track by profile.id" required>
+            </select>
+        </div>
+        <div ng-show="editForm.profile.$invalid">
+            <p class="help-block"
+                ng-show="editForm.profile.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="hmisApp.house.user" for="field_user">User</label>
+            <select class="form-control" id="field_user" name="user" ng-model="vm.house.user" ng-options="user as user.login for user in vm.users track by user.id" required>
+            </select>
+        </div>
+        <div ng-show="editForm.user.$invalid">
+            <p class="help-block"
+                ng-show="editForm.user.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>-->
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <h6 class="control-label" translate="hmisApp.house.status">Status</h6>
+                <div>
+                    <label class="radio-inline btn btn-default"><input type="radio" name="status" value="true"
+                                                                       ng-checked="(vm.house.status == true || vm.house.status == null)"
+                                                                       ng-model="vm.house.status"><span
+                        translate="entity.action.active">Active</span></label>&nbsp;&nbsp;
+
+                    <label class="radio-inline btn btn-default"><input type="radio" name="status" value="false"
+                                                                       ng-checked="vm.house.status == false && vm.house.status != null"
+                                                                       ng-model="vm.house.status"><span
+                        translate="entity.action.deactivate">Deactive</span></label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span
+            data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

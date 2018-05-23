@@ -1,0 +1,29 @@
+
+{
+    "hmisApp": {
+        "country" : {
+            "home": {
+                "title": "Countries",
+                "createLabel": "Vytvořit Country",
+                "createOrEditLabel": "Vytvořit nebo upravit Country"
+            },
+            "created": "Byl vytvořen potomek entity Country s identifikátorem {{ param }}",
+            "updated": "Potomek entity Country s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Country s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Country {{ id }}?"
+            },
+            "detail": {
+                "title": "Country"
+            },
+            "name": "Name",
+            "regionalName": "Regional Name",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createby": "Createby",
+            "updatedate": "Updatedate",
+            "updateby": "Updateby"
+        }
+    }
+}

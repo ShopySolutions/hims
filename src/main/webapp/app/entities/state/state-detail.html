@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span data-translate="hmisApp.state.detail.title">State</span> {{vm.state.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="hmisApp.state.name">Name</span></dt>
+        <dd>
+            <span>{{vm.state.name}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.state.regionalName">Regional Name</span></dt>
+        <dd>
+            <span>{{vm.state.regionalName}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.state.country">Country</span></dt>
+        <dd>
+            <a ui-sref="country-detail({id:vm.state.country.id})">{{vm.state.country.name}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.state.lat">Lat</span></dt>
+        <dd>
+            <span>{{vm.state.lat}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.state.lon">Lon</span></dt>
+        <dd>
+            <span>{{vm.state.lon}}</span>
+        </dd>
+       <!-- <dt><span data-translate="hmisApp.state.createdate">Createdate</span></dt>
+        <dd>
+            <span>{{vm.state.createdate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.state.createby">Createby</span></dt>
+        <dd>
+            <span>{{vm.state.createby}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.state.updatedate">Updatedate</span></dt>
+        <dd>
+            <span>{{vm.state.updatedate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.state.updateby">Updateby</span></dt>
+        <dd>
+            <span>{{vm.state.updateby}}</span>
+        </dd>-->
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="state-detail.edit({id:vm.state.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,41 @@
+
+{
+    "hmisApp": {
+        "flat" : {
+            "home": {
+                "title": "Flats",
+                "createLabel": "建立一筆新的 Flat",
+                "createOrEditLabel": "建立或編輯 Flat"
+            },
+            "created": "新的 Flat 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Flat 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Flat 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Flat {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Flat"
+            },
+            "flatNameOrNo": "Flat Name Or No",
+            "flatSize": "Flat Size",
+            "totalBedRoom": "Total Bed Room",
+            "drawDinDraCumDin": "Draw Din Dra Cum Din",
+            "totalWashroom": "Total Washroom",
+            "kitchen": "Kitchen",
+            "totalBelcony": "Total Belcony",
+            "storeRoom": "Store Room",
+            "floorType": "Floor Type",
+            "flatFair": "Flat Fair",
+            "serviceCharge": "Service Charge",
+            "totalFair": "Total Fair",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor"
+        }
+    }
+}

@@ -1,0 +1,41 @@
+
+{
+    "hmisApp": {
+        "flat" : {
+            "home": {
+                "title": "Flats",
+                "createLabel": "创建新 Flat",
+                "createOrEditLabel": "创建或编辑 Flat"
+            },
+            "created": "Flat {{ param }} 创建成功",
+            "updated": "Flat {{ param }} 更新成功",
+            "deleted": "Flat {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Flat {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Flat"
+            },
+            "flatNameOrNo": "Flat Name Or No",
+            "flatSize": "Flat Size",
+            "totalBedRoom": "Total Bed Room",
+            "drawDinDraCumDin": "Draw Din Dra Cum Din",
+            "totalWashroom": "Total Washroom",
+            "kitchen": "Kitchen",
+            "totalBelcony": "Total Belcony",
+            "storeRoom": "Store Room",
+            "floorType": "Floor Type",
+            "flatFair": "Flat Fair",
+            "serviceCharge": "Service Charge",
+            "totalFair": "Total Fair",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor"
+        }
+    }
+}

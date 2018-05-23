@@ -1,0 +1,36 @@
+
+{
+    "hmisApp": {
+        "billing" : {
+            "home": {
+                "title": "Billings",
+                "createLabel": "Ստեղծել նոր Billing",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Billing"
+            },
+            "created": "Նոր Billing ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Billing թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Billing հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Billing {{ id }}?"
+            },
+            "detail": {
+                "title": "Billing"
+            },
+            "flatFair": "Flat Fair",
+            "electricityBill": "Electricity Bill",
+            "gasBill": "Gas Bill",
+            "internetBill": "Internet Bill",
+            "transactionId": "Transaction Id",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor",
+            "flat": "Flat",
+            "rent": "Rent"
+        }
+    }
+}

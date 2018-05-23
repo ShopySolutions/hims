@@ -1,0 +1,145 @@
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title" id="myRentLabel" data-translate="hmisApp.rent.home.createOrEditLabel">Create or edit a
+            Rent</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <!--<div class="form-group" ng-show="vm.rent.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.rent.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="hmisApp.rent.createdate" for="field_createdate">Createdate</label>
+                <div class="input-group">
+                    <input id="field_createdate" type="text" class="form-control" name="createdate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.rent.createdate" is-open="vm.datePickerOpenStatus.createdate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="hmisApp.rent.createBy" for="field_createBy">Create By</label>
+            <input type="number" class="form-control" name="createBy" id="field_createBy"
+                    ng-model="vm.rent.createBy"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="hmisApp.rent.updateDate" for="field_updateDate">Update Date</label>
+                <div class="input-group">
+                    <input id="field_updateDate" type="text" class="form-control" name="updateDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.rent.updateDate" is-open="vm.datePickerOpenStatus.updateDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('updateDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="hmisApp.rent.updateBy" for="field_updateBy">Update By</label>
+            <input type="number" class="form-control" name="updateBy" id="field_updateBy"
+                    ng-model="vm.rent.updateBy"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="hmisApp.rent.profile" for="field_profile">Profile</label>
+            <select class="form-control" id="field_profile" name="profile" ng-model="vm.rent.profile" ng-options="profile as profile.firstName for profile in vm.profiles track by profile.id" required>
+            </select>
+        </div>
+        <div ng-show="editForm.profile.$invalid">
+            <p class="help-block"
+                ng-show="editForm.profile.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="hmisApp.rent.user" for="field_user">User</label>
+            <select class="form-control" id="field_user" name="user" ng-model="vm.rent.user" ng-options="user as user.login for user in vm.users track by user.id" required>
+            </select>
+        </div>
+        <div ng-show="editForm.user.$invalid">
+            <p class="help-block"
+                ng-show="editForm.user.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>-->
+
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label data-translate="hmisApp.rent.house" for="field_house">House</label>
+                <select class="form-control" id="field_house" name="house" ng-model="vm.rent.house"
+                        ng-options="house as house.houseName for house in vm.houses track by house.id" required>
+                </select>
+            </div>
+           <!-- <div ng-show="editForm.house.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.house.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>-->
+        </div>
+        <div class="form-group col-sm-6">
+
+            <div class="form-group">
+                <label data-translate="hmisApp.rent.floor" for="field_floor">Floor</label>
+                <select class="form-control" id="field_floor" name="floor" ng-model="vm.rent.floor"
+                        ng-options="floor as floor.floorNo for floor in vm.floors track by floor.id" required>
+                </select>
+            </div>
+            <!--<div ng-show="editForm.floor.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.floor.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>-->
+        </div>
+        <div class="form-group col-sm-6">
+
+            <div class="form-group">
+                <label data-translate="hmisApp.rent.flat" for="field_flat">Flat</label>
+                <select class="form-control" id="field_flat" name="flat" ng-model="vm.rent.flat"
+                        ng-options="flat as flat.flatNameOrNo for flat in vm.flats track by flat.id" required>
+                </select>
+            </div>
+            <!--<div ng-show="editForm.flat.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.flat.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>-->
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <h6 class="control-label" translate="hmisApp.rent.status">Status</h6>
+                <div>
+                    <label class="radio-inline btn btn-default"><input type="radio" name="status" value="true"
+                                                                       ng-checked="(vm.rent.status == true || vm.rent.status == null)"
+                                                                       ng-model="vm.rent.status"><span
+                        translate="entity.action.active">Active</span></label>&nbsp;&nbsp;
+
+                    <label class="radio-inline btn btn-default"><input type="radio" name="status" value="false"
+                                                                       ng-checked="vm.rent.status == false && vm.rent.status != null"
+                                                                       ng-model="vm.rent.status"><span
+                        translate="entity.action.deactivate">Deactive</span></label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span
+            data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

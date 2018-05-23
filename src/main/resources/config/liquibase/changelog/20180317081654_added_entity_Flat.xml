@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Flat.
+    -->
+    <changeSet id="20180317081654-1" author="jhipster">
+        <createTable tableName="flat">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="flat_name_or_no" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="flat_size" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="total_bed_room" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="draw_din_dra_cum_din" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="total_washroom" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="kitchen" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="total_belcony" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="store_room" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="floor_type" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="flat_fair" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="service_charge" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="total_fair" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="createdate" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="create_by" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="update_date" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="update_by" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="profile_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="user_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="house_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="floor_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="status" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

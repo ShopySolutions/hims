@@ -1,0 +1,38 @@
+
+{
+    "hmisApp": {
+        "house" : {
+            "home": {
+                "title": "Houses",
+                "createLabel": "Ստեղծել նոր House",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել House"
+            },
+            "created": "Նոր House ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "House թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "House հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել House {{ id }}?"
+            },
+            "detail": {
+                "title": "House"
+            },
+            "houseName": "House Name",
+            "houseNo": "House No",
+            "address": "Address",
+            "houseToFloorNo": "House To Floor No",
+            "ownToFloorNo": "Own To Floor No",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "image": "Image",
+            "country": "Country",
+            "state": "State",
+            "city": "City",
+            "profile": "Profile",
+            "user": "User"
+        }
+    }
+}

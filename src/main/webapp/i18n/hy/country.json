@@ -1,0 +1,29 @@
+
+{
+    "hmisApp": {
+        "country" : {
+            "home": {
+                "title": "Countries",
+                "createLabel": "Ստեղծել նոր Country",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Country"
+            },
+            "created": "Նոր Country ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Country թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Country հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Country {{ id }}?"
+            },
+            "detail": {
+                "title": "Country"
+            },
+            "name": "Name",
+            "regionalName": "Regional Name",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createby": "Createby",
+            "updatedate": "Updatedate",
+            "updateby": "Updateby"
+        }
+    }
+}

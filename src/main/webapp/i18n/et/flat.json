@@ -1,0 +1,41 @@
+
+{
+    "hmisApp": {
+        "flat" : {
+            "home": {
+                "title": "Flats",
+                "createLabel": "Lisa uus Flat",
+                "createOrEditLabel": "Lisa või muuda Flat"
+            },
+            "created": "Uus Flat on loodud identifikaatoriga {{ param }}",
+            "updated": "Flat identifikaatoriga {{ param }} on muudetud",
+            "deleted": "Flat identifikaatoriga {{ param }} on kustutatud",
+            "delete": {
+                "question": "Kas olete kindel, et soovite kustutada Flat {{ id }}?"
+            },
+            "detail": {
+                "title": "Flat"
+            },
+            "flatNameOrNo": "Flat Name Or No",
+            "flatSize": "Flat Size",
+            "totalBedRoom": "Total Bed Room",
+            "drawDinDraCumDin": "Draw Din Dra Cum Din",
+            "totalWashroom": "Total Washroom",
+            "kitchen": "Kitchen",
+            "totalBelcony": "Total Belcony",
+            "storeRoom": "Store Room",
+            "floorType": "Floor Type",
+            "flatFair": "Flat Fair",
+            "serviceCharge": "Service Charge",
+            "totalFair": "Total Fair",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor"
+        }
+    }
+}

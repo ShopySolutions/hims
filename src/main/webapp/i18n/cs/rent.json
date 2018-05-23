@@ -1,0 +1,30 @@
+
+{
+    "hmisApp": {
+        "rent" : {
+            "home": {
+                "title": "Rents",
+                "createLabel": "Vytvořit Rent",
+                "createOrEditLabel": "Vytvořit nebo upravit Rent"
+            },
+            "created": "Byl vytvořen potomek entity Rent s identifikátorem {{ param }}",
+            "updated": "Potomek entity Rent s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Rent s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Rent {{ id }}?"
+            },
+            "detail": {
+                "title": "Rent"
+            },
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor",
+            "flat": "Flat"
+        }
+    }
+}

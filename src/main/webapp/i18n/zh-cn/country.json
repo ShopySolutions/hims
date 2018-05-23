@@ -1,0 +1,29 @@
+
+{
+    "hmisApp": {
+        "country" : {
+            "home": {
+                "title": "Countries",
+                "createLabel": "创建新 Country",
+                "createOrEditLabel": "创建或编辑 Country"
+            },
+            "created": "Country {{ param }} 创建成功",
+            "updated": "Country {{ param }} 更新成功",
+            "deleted": "Country {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Country {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Country"
+            },
+            "name": "Name",
+            "regionalName": "Regional Name",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createby": "Createby",
+            "updatedate": "Updatedate",
+            "updateby": "Updateby"
+        }
+    }
+}

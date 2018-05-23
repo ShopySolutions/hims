@@ -1,0 +1,99 @@
+
+<div>
+    <h2><span data-translate="hmisApp.flat.detail.title">Flat</span> {{vm.flat.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="hmisApp.flat.flatNameOrNo">Flat Name Or No</span></dt>
+        <dd>
+            <span>{{vm.flat.flatNameOrNo}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.flatSize">Flat Size</span></dt>
+        <dd>
+            <span>{{vm.flat.flatSize}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.totalBedRoom">Total Bed Room</span></dt>
+        <dd>
+            <span>{{vm.flat.totalBedRoom}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.drawDinDraCumDin">Draw Din Dra Cum Din</span></dt>
+        <dd>
+            <span>{{vm.flat.drawDinDraCumDin}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.totalWashroom">Total Washroom</span></dt>
+        <dd>
+            <span>{{vm.flat.totalWashroom}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.kitchen">Kitchen</span></dt>
+        <dd>
+            <span>{{vm.flat.kitchen}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.totalBelcony">Total Belcony</span></dt>
+        <dd>
+            <span>{{vm.flat.totalBelcony}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.storeRoom">Store Room</span></dt>
+        <dd>
+            <span>{{vm.flat.storeRoom}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.floorType">Floor Type</span></dt>
+        <dd>
+            <span>{{vm.flat.floorType}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.flatFair">Flat Fair</span></dt>
+        <dd>
+            <span>{{vm.flat.flatFair}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.serviceCharge">Service Charge</span></dt>
+        <dd>
+            <span>{{vm.flat.serviceCharge}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.totalFair">Total Fair</span></dt>
+        <dd>
+            <span>{{vm.flat.totalFair}}</span>
+        </dd>
+        <!--<dt><span data-translate="hmisApp.flat.createdate">Createdate</span></dt>
+        <dd>
+            <span>{{vm.flat.createdate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.flat.createBy}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.updateDate">Update Date</span></dt>
+        <dd>
+            <span>{{vm.flat.updateDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{vm.flat.updateBy}}</span>
+        </dd>-->
+        <!--<dt><span data-translate="hmisApp.flat.profile">Profile</span></dt>
+        <dd>
+            <a ui-sref="profile-detail({id:vm.flat.profile.id})">{{vm.flat.profile.firstName}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.user">User</span></dt>
+        <dd>
+            {{vm.flat.user.login}}
+        </dd>-->
+        <dt><span data-translate="hmisApp.flat.house">House</span></dt>
+        <dd>
+            <a ui-sref="house-detail({id:vm.flat.house.id})">{{vm.flat.house.houseName}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.flat.floor">Floor</span></dt>
+        <dd>
+            <a ui-sref="floor-detail({id:vm.flat.floor.id})">{{vm.flat.floor.floorNo}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="flat-detail.edit({id:vm.flat.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

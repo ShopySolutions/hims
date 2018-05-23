@@ -1,0 +1,38 @@
+
+{
+    "hmisApp": {
+        "house" : {
+            "home": {
+                "title": "Houses",
+                "createLabel": "创建新 House",
+                "createOrEditLabel": "创建或编辑 House"
+            },
+            "created": "House {{ param }} 创建成功",
+            "updated": "House {{ param }} 更新成功",
+            "deleted": "House {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 House {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "House"
+            },
+            "houseName": "House Name",
+            "houseNo": "House No",
+            "address": "Address",
+            "houseToFloorNo": "House To Floor No",
+            "ownToFloorNo": "Own To Floor No",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "image": "Image",
+            "country": "Country",
+            "state": "State",
+            "city": "City",
+            "profile": "Profile",
+            "user": "User"
+        }
+    }
+}

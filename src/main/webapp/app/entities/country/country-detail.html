@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="hmisApp.country.detail.title">Country</span> {{vm.country.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="hmisApp.country.name">Name</span></dt>
+        <dd>
+            <span>{{vm.country.name}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.country.regionalName">Regional Name</span></dt>
+        <dd>
+            <span>{{vm.country.regionalName}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.country.lat">Lat</span></dt>
+        <dd>
+            <span>{{vm.country.lat}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.country.lon">Lon</span></dt>
+        <dd>
+            <span>{{vm.country.lon}}</span>
+        </dd>
+       <!-- <dt><span data-translate="hmisApp.country.createdate">Createdate</span></dt>
+        <dd>
+            <span>{{vm.country.createdate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.country.createby">Createby</span></dt>
+        <dd>
+            <span>{{vm.country.createby}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.country.updatedate">Updatedate</span></dt>
+        <dd>
+            <span>{{vm.country.updatedate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.country.updateby">Updateby</span></dt>
+        <dd>
+            <span>{{vm.country.updateby}}</span>
+        </dd>-->
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="country-detail.edit({id:vm.country.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

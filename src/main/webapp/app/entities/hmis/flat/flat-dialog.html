@@ -1,0 +1,349 @@
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title" id="myFlatLabel" data-translate="hmisApp.flat.home.createOrEditLabel">Create or edit a
+            Flat</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <!--<div class="form-group" ng-show="vm.flat.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.flat.id" readonly />
+        </div>-->
+
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label data-translate="hmisApp.flat.house" for="field_house">House</label>
+                <select class="form-control" id="field_house" name="house" ng-model="vm.flat.house"
+                        ng-options="house as house.houseNo+' - '+house.houseName for house in vm.houses track by house.id"
+                        required>
+                </select>
+                <!--<div ng-show="editForm.house.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.house.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label data-translate="hmisApp.flat.floor" for="field_floor">Floor</label>
+                <select class="form-control" id="field_floor" name="floor" ng-model="vm.flat.floor"
+                        ng-options="floor as floor.floorNo for floor in vm.floors track by floor.id" required>
+                </select>
+
+                <!--<div ng-show="editForm.floor.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.floor.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.flat.flatNameOrNo" for="field_flatNameOrNo">Flat
+                    Name
+                    Or No</label>
+                <input type="text" class="form-control" name="flatNameOrNo" id="field_flatNameOrNo"
+                       ng-model="vm.flat.flatNameOrNo"
+                       required/>
+                <!--<div ng-show="editForm.flatNameOrNo.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.flatNameOrNo.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.flat.flatSize" for="field_flatSize">Flat
+                    Size</label>
+                <input type="text" class="form-control" name="flatSize" id="field_flatSize"
+                       ng-model="vm.flat.flatSize"
+                       required/>
+                <!--<div ng-show="editForm.flatSize.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.flatSize.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.flat.totalBedRoom" for="field_totalBedRoom">Total
+                    Bed
+                    Room</label>
+                <input type="number" class="form-control" name="totalBedRoom" id="field_totalBedRoom"
+                       ng-model="vm.flat.totalBedRoom"
+                       required/>
+                <div ng-show="editForm.totalBedRoom.$invalid">
+                    <!--<p class="help-block"
+                       ng-show="editForm.totalBedRoom.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>-->
+                    <p class="help-block"
+                       ng-show="editForm.totalBedRoom.$error.number" data-translate="entity.validation.number">
+                        This field should be a number.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.flat.drawDinDraCumDin"
+                       for="field_drawDinDraCumDin">Draw
+                    Din Dra Cum Din</label>
+                <input type="text" class="form-control" name="drawDinDraCumDin" id="field_drawDinDraCumDin"
+                       ng-model="vm.flat.drawDinDraCumDin"
+                       required/>
+                <!--<div ng-show="editForm.drawDinDraCumDin.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.drawDinDraCumDin.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.flat.totalWashroom" for="field_totalWashroom">Total
+                    Washroom</label>
+                <input type="number" class="form-control" name="totalWashroom" id="field_totalWashroom"
+                       ng-model="vm.flat.totalWashroom"
+                       required/>
+                <div ng-show="editForm.totalWashroom.$invalid">
+                    <!--<p class="help-block"
+                       ng-show="editForm.totalWashroom.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>-->
+                    <p class="help-block"
+                       ng-show="editForm.totalWashroom.$error.number" data-translate="entity.validation.number">
+                        This field should be a number.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.flat.kitchen" for="field_kitchen">Kitchen</label>
+                <input type="number" class="form-control" name="kitchen" id="field_kitchen"
+                       ng-model="vm.flat.kitchen"
+                       required/>
+                <div ng-show="editForm.kitchen.$invalid">
+                    <!--<p class="help-block"
+                       ng-show="editForm.kitchen.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>-->
+                    <p class="help-block"
+                       ng-show="editForm.kitchen.$error.number" data-translate="entity.validation.number">
+                        This field should be a number.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.flat.totalBelcony" for="field_totalBelcony">Total
+                    Belcony</label>
+                <input type="number" class="form-control" name="totalBelcony" id="field_totalBelcony"
+                       ng-model="vm.flat.totalBelcony"
+                       required/>
+                <div ng-show="editForm.totalBelcony.$invalid">
+                    <!--<p class="help-block"
+                       ng-show="editForm.totalBelcony.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>-->
+                    <p class="help-block"
+                       ng-show="editForm.totalBelcony.$error.number" data-translate="entity.validation.number">
+                        This field should be a number.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.flat.storeRoom" for="field_storeRoom">Store
+                    Room</label>
+                <input type="number" class="form-control" name="storeRoom" id="field_storeRoom"
+                       ng-model="vm.flat.storeRoom"
+                       required/>
+                <div ng-show="editForm.storeRoom.$invalid">
+                    <!-- <p class="help-block"
+                        ng-show="editForm.storeRoom.$error.required" data-translate="entity.validation.required">
+                         This field is required.
+                     </p>-->
+                    <p class="help-block"
+                       ng-show="editForm.storeRoom.$error.number" data-translate="entity.validation.number">
+                        This field should be a number.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.flat.floorType" for="field_floorType">Floor
+                    Type</label>
+                <input type="text" class="form-control" name="floorType" id="field_floorType"
+                       ng-model="vm.flat.floorType"
+                       required/>
+                <!--<div ng-show="editForm.floorType.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.floorType.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.flat.flatFair" for="field_flatFair">Flat
+                    Fair</label>
+                <input type="text" class="form-control" name="flatFair" id="field_flatFair"
+                       ng-model="vm.flat.flatFair"
+                       ng-change="calculateTotalPrice(vm.flat)"
+                       required/>
+                <!--<div ng-show="editForm.flatFair.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.flatFair.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.flat.serviceCharge" for="field_serviceCharge">Service
+                    Charge</label>
+                <input type="text" class="form-control" name="serviceCharge" id="field_serviceCharge"
+                       ng-model="vm.flat.serviceCharge"
+                       ng-change="calculateTotalPrice(vm.flat)"
+                       required/>
+                <!--<div ng-show="editForm.serviceCharge.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.serviceCharge.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.flat.totalFair" for="field_totalFair">Total
+                    Fair</label>
+                <input type="text" class="form-control" name="totalFair" id="field_totalFair"
+                       ng-model="vm.flat.totalFair"
+                       readonly
+                       required/>
+                <!--<div ng-show="editForm.totalFair.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.totalFair.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <!-- <div class="form-group">
+             <label class="control-label" data-translate="hmisApp.flat.createdate" for="field_createdate">Createdate</label>
+                 <div class="input-group">
+                     <input id="field_createdate" type="text" class="form-control" name="createdate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.flat.createdate" is-open="vm.datePickerOpenStatus.createdate"
+                     />
+                     <span class="input-group-btn">
+                         <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                     </span>
+                 </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label" data-translate="hmisApp.flat.createBy" for="field_createBy">Create By</label>
+             <input type="number" class="form-control" name="createBy" id="field_createBy"
+                     ng-model="vm.flat.createBy"
+                     />
+         </div>
+         <div class="form-group">
+             <label class="control-label" data-translate="hmisApp.flat.updateDate" for="field_updateDate">Update Date</label>
+                 <div class="input-group">
+                     <input id="field_updateDate" type="text" class="form-control" name="updateDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.flat.updateDate" is-open="vm.datePickerOpenStatus.updateDate"
+                     />
+                     <span class="input-group-btn">
+                         <button type="button" class="btn btn-default" ng-click="vm.openCalendar('updateDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                     </span>
+                 </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label" data-translate="hmisApp.flat.updateBy" for="field_updateBy">Update By</label>
+             <input type="number" class="form-control" name="updateBy" id="field_updateBy"
+                     ng-model="vm.flat.updateBy"
+                     />
+         </div>-->
+
+        <!-- <div class="form-group">
+             <label data-translate="hmisApp.flat.profile" for="field_profile">Profile</label>
+             <select class="form-control" id="field_profile" name="profile" ng-model="vm.flat.profile" ng-options="profile as profile.firstName for profile in vm.profiles track by profile.id" required>
+             </select>
+         </div>
+         <div ng-show="editForm.profile.$invalid">
+             <p class="help-block"
+                 ng-show="editForm.profile.$error.required" data-translate="entity.validation.required">
+                 This field is required.
+             </p>
+         </div>
+         <div class="form-group">
+             <label data-translate="hmisApp.flat.user" for="field_user">User</label>
+             <select class="form-control" id="field_user" name="user" ng-model="vm.flat.user" ng-options="user as user.login for user in vm.users track by user.id" required>
+             </select>
+         </div>
+         <div ng-show="editForm.user.$invalid">
+             <p class="help-block"
+                 ng-show="editForm.user.$error.required" data-translate="entity.validation.required">
+                 This field is required.
+             </p>
+         </div>-->
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <h6 class="control-label" translate="hmisApp.flat.status">Status</h6>
+                <div>
+                    <label class="radio-inline btn btn-default"><input type="radio" name="status" value="true"
+                                                                       ng-checked="(vm.flat.status == true || vm.flat.status == null)"
+                                                                       ng-model="vm.flat.status"><span
+                        translate="entity.action.active">Active</span></label>&nbsp;&nbsp;
+
+                    <label class="radio-inline btn btn-default"><input type="radio" name="status" value="false"
+                                                                       ng-checked="vm.flat.status == false && vm.flat.status != null"
+                                                                       ng-model="vm.flat.status"><span
+                        translate="entity.action.deactivate">Deactive</span></label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span
+            data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
+
+
+<script type="application/javascript">
+
+    $(document).ready(function () {
+        $('.js-example-basic-single').select2();
+    });
+
+
+</script>

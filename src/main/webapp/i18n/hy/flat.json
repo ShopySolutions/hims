@@ -1,0 +1,41 @@
+
+{
+    "hmisApp": {
+        "flat" : {
+            "home": {
+                "title": "Flats",
+                "createLabel": "Ստեղծել նոր Flat",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Flat"
+            },
+            "created": "Նոր Flat ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Flat թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Flat հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Flat {{ id }}?"
+            },
+            "detail": {
+                "title": "Flat"
+            },
+            "flatNameOrNo": "Flat Name Or No",
+            "flatSize": "Flat Size",
+            "totalBedRoom": "Total Bed Room",
+            "drawDinDraCumDin": "Draw Din Dra Cum Din",
+            "totalWashroom": "Total Washroom",
+            "kitchen": "Kitchen",
+            "totalBelcony": "Total Belcony",
+            "storeRoom": "Store Room",
+            "floorType": "Floor Type",
+            "flatFair": "Flat Fair",
+            "serviceCharge": "Service Charge",
+            "totalFair": "Total Fair",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor"
+        }
+    }
+}

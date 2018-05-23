@@ -1,0 +1,114 @@
+<div>
+    <h2 data-translate="hmisApp.profile.home.title">Profiles</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="profile.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="hmisApp.profile.home.createLabel">
+                        Create new Profile
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="user.login"><span data-translate="hmisApp.profile.user">User</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <th jh-sort-by="firstName"><span data-translate="hmisApp.profile.firstName">First Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastName"><span data-translate="hmisApp.profile.lastName">Last Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="profileImage"><span data-translate="hmisApp.profile.profileImage">Profile Image</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="mobileNo"><span data-translate="hmisApp.profile.mobileNo">Mobile No</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="telephoneNo"><span data-translate="hmisApp.profile.telephoneNo">Telephone No</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email"><span data-translate="hmisApp.profile.email">Email</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="gender"><span data-translate="hmisApp.profile.gender">Gender</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="religion"><span data-translate="hmisApp.profile.religion">Religion</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nidOrPassportNo"><span data-translate="hmisApp.profile.nidOrPassportNo">Nid Or Passport No</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nidOrPassport"><span data-translate="hmisApp.profile.nidOrPassport">Nid Or Passport</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="address"><span data-translate="hmisApp.profile.address">Address</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="createdate"><span data-translate="hmisApp.profile.createdate">Createdate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createBy"><span data-translate="hmisApp.profile.createBy">Create By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="updateDate"><span data-translate="hmisApp.profile.updateDate">Update Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="updateBy"><span data-translate="hmisApp.profile.updateBy">Update By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <th jh-sort-by="country.name"><span data-translate="hmisApp.profile.country">Country</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="state.name"><span data-translate="hmisApp.profile.state">State</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="city.name"><span data-translate="hmisApp.profile.city">City</span> <span class="glyphicon glyphicon-sort"></span></th>
+
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="profile in vm.profiles track by profile.id">
+                    <td><a ui-sref="profile-detail({id:profile.id})">{{$index+1}}</a></td>
+                    <!--<td>
+                        {{profile.user.login}}
+                    </td>-->
+                    <td>{{profile.firstName}}</td>
+                    <td>{{profile.lastName}}</td>
+                    <td>
+                        <a ng-if="profile.profileImage" ng-click="vm.openFile(profile.profileImageContentType, profile.profileImage)">
+                            <img data-ng-src="{{'data:' + profile.profileImageContentType + ';base64,' + profile.profileImage}}" style="max-height: 30px;" alt="profile image"/>
+                        </a>
+                        <span ng-if="profile.profileImage">{{profile.profileImageContentType}}, {{vm.byteSize(profile.profileImage)}}</span>
+                    </td>
+                    <td>{{profile.mobileNo}}</td>
+                    <td>{{profile.telephoneNo}}</td>
+                    <td>{{profile.email}}</td>
+                    <td>{{profile.gender}}</td>
+                    <td>{{profile.religion}}</td>
+                    <td>{{profile.nidOrPassportNo}}</td>
+                    <td>
+                        <a ng-if="profile.nidOrPassport" ng-click="vm.openFile(profile.nidOrPassportContentType, profile.nidOrPassport)">
+                            <img data-ng-src="{{'data:' + profile.nidOrPassportContentType + ';base64,' + profile.nidOrPassport}}" style="max-height: 30px;" alt="profile image"/>
+                        </a>
+                        <span ng-if="profile.nidOrPassport">{{profile.nidOrPassportContentType}}, {{vm.byteSize(profile.nidOrPassport)}}</span>
+                    </td>
+                    <td>{{profile.address}}</td>
+                       <!-- <td>{{profile.createdate | date:'mediumDate'}}</td>
+                    <td>{{profile.createBy}}</td>
+                        <td>{{profile.updateDate | date:'mediumDate'}}</td>
+                    <td>{{profile.updateBy}}</td>-->
+
+
+                    <td>
+                        <a ui-sref="country-detail({id:profile.country.id})">{{profile.country.name}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="state-detail({id:profile.state.id})">{{profile.state.name}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="city-detail({id:profile.city.id})">{{profile.city.name}}</a>
+                    </td>
+
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="profile-detail({id:profile.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="profile.edit({id:profile.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="profile.delete({id:profile.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

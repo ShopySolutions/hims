@@ -1,0 +1,83 @@
+<div>
+    <h2 data-translate="hmisApp.rent.home.title">Rents</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="rent.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="hmisApp.rent.home.createLabel">
+                        Create new Rent
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="createdate"><span data-translate="hmisApp.rent.createdate">Createdate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createBy"><span data-translate="hmisApp.rent.createBy">Create By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="updateDate"><span data-translate="hmisApp.rent.updateDate">Update Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="updateBy"><span data-translate="hmisApp.rent.updateBy">Update By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="profile.firstName"><span data-translate="hmisApp.rent.profile">Profile</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="user.login"><span data-translate="hmisApp.rent.user">User</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <th jh-sort-by="house.houseName"><span data-translate="hmisApp.rent.house">House</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="floor.floorNo"><span data-translate="hmisApp.rent.floor">Floor</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="flat.flatNameOrNo"><span data-translate="hmisApp.rent.flat">Flat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="rent in vm.rents track by rent.id">
+                    <td><a ui-sref="rent-detail({id:rent.id})">{{$index+1}}</a></td>
+
+                       <!-- <td>{{rent.createdate | date:'mediumDate'}}</td>
+                    <td>{{rent.createBy}}</td>
+                        <td>{{rent.updateDate | date:'mediumDate'}}</td>
+                    <td>{{rent.updateBy}}</td>
+                    <td>
+                        <a ui-sref="profile-detail({id:rent.profile.id})">{{rent.profile.firstName}}</a>
+                    </td>
+                    <td>
+                        {{rent.user.login}}
+                    </td>-->
+                    <td>
+                        <a ui-sref="house-detail({id:rent.house.id})">{{rent.house.houseName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="floor-detail({id:rent.floor.id})">{{rent.floor.floorNo}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="flat-detail({id:rent.flat.id})">{{rent.flat.flatNameOrNo}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="rent-detail({id:rent.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="rent.edit({id:rent.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="rent.delete({id:rent.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+
+{
+    "hmisApp": {
+        "rent" : {
+            "home": {
+                "title": "Rents",
+                "createLabel": "Lisa uus Rent",
+                "createOrEditLabel": "Lisa või muuda Rent"
+            },
+            "created": "Uus Rent on loodud identifikaatoriga {{ param }}",
+            "updated": "Rent identifikaatoriga {{ param }} on muudetud",
+            "deleted": "Rent identifikaatoriga {{ param }} on kustutatud",
+            "delete": {
+                "question": "Kas olete kindel, et soovite kustutada Rent {{ id }}?"
+            },
+            "detail": {
+                "title": "Rent"
+            },
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor",
+            "flat": "Flat"
+        }
+    }
+}

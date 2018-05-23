@@ -1,0 +1,36 @@
+
+{
+    "hmisApp": {
+        "billing" : {
+            "home": {
+                "title": "Billings",
+                "createLabel": "Maak een nieuwe Billing",
+                "createOrEditLabel": "Maak of wijzig een Billing"
+            },
+            "created": "A new Billing is created with identifier {{ param }}",
+            "updated": "A Billing is updated with identifier {{ param }}",
+            "deleted": "A Billing is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u Billing {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "Billing"
+            },
+            "flatFair": "Flat Fair",
+            "electricityBill": "Electricity Bill",
+            "gasBill": "Gas Bill",
+            "internetBill": "Internet Bill",
+            "transactionId": "Transaction Id",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor",
+            "flat": "Flat",
+            "rent": "Rent"
+        }
+    }
+}

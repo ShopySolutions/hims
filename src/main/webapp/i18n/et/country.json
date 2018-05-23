@@ -1,0 +1,29 @@
+
+{
+    "hmisApp": {
+        "country" : {
+            "home": {
+                "title": "Countries",
+                "createLabel": "Lisa uus Country",
+                "createOrEditLabel": "Lisa või muuda Country"
+            },
+            "created": "Uus Country on loodud identifikaatoriga {{ param }}",
+            "updated": "Country identifikaatoriga {{ param }} on muudetud",
+            "deleted": "Country identifikaatoriga {{ param }} on kustutatud",
+            "delete": {
+                "question": "Kas olete kindel, et soovite kustutada Country {{ id }}?"
+            },
+            "detail": {
+                "title": "Country"
+            },
+            "name": "Name",
+            "regionalName": "Regional Name",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createby": "Createby",
+            "updatedate": "Updatedate",
+            "updateby": "Updateby"
+        }
+    }
+}

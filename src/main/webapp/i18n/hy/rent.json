@@ -1,0 +1,30 @@
+
+{
+    "hmisApp": {
+        "rent" : {
+            "home": {
+                "title": "Rents",
+                "createLabel": "Ստեղծել նոր Rent",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Rent"
+            },
+            "created": "Նոր Rent ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Rent թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Rent հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Rent {{ id }}?"
+            },
+            "detail": {
+                "title": "Rent"
+            },
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor",
+            "flat": "Flat"
+        }
+    }
+}

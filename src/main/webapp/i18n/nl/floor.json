@@ -1,0 +1,30 @@
+
+{
+    "hmisApp": {
+        "floor" : {
+            "home": {
+                "title": "Floors",
+                "createLabel": "Maak een nieuwe Floor",
+                "createOrEditLabel": "Maak of wijzig een Floor"
+            },
+            "created": "A new Floor is created with identifier {{ param }}",
+            "updated": "A Floor is updated with identifier {{ param }}",
+            "deleted": "A Floor is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u Floor {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "Floor"
+            },
+            "floorNo": "Floor No",
+            "totalFlat": "Total Flat",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House"
+        }
+    }
+}

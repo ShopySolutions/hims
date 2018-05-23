@@ -1,0 +1,36 @@
+
+{
+    "hmisApp": {
+        "billing" : {
+            "home": {
+                "title": "Billings",
+                "createLabel": "Vytvořit Billing",
+                "createOrEditLabel": "Vytvořit nebo upravit Billing"
+            },
+            "created": "Byl vytvořen potomek entity Billing s identifikátorem {{ param }}",
+            "updated": "Potomek entity Billing s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Billing s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Billing {{ id }}?"
+            },
+            "detail": {
+                "title": "Billing"
+            },
+            "flatFair": "Flat Fair",
+            "electricityBill": "Electricity Bill",
+            "gasBill": "Gas Bill",
+            "internetBill": "Internet Bill",
+            "transactionId": "Transaction Id",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor",
+            "flat": "Flat",
+            "rent": "Rent"
+        }
+    }
+}

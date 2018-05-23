@@ -1,0 +1,30 @@
+
+{
+    "hmisApp": {
+        "state" : {
+            "home": {
+                "title": "States",
+                "createLabel": "Lisa uus State",
+                "createOrEditLabel": "Lisa või muuda State"
+            },
+            "created": "Uus State on loodud identifikaatoriga {{ param }}",
+            "updated": "State identifikaatoriga {{ param }} on muudetud",
+            "deleted": "State identifikaatoriga {{ param }} on kustutatud",
+            "delete": {
+                "question": "Kas olete kindel, et soovite kustutada State {{ id }}?"
+            },
+            "detail": {
+                "title": "State"
+            },
+            "name": "Name",
+            "regionalName": "Regional Name",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createby": "Createby",
+            "updatedate": "Updatedate",
+            "updateby": "Updateby",
+            "country": "Country"
+        }
+    }
+}

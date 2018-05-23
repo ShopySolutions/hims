@@ -1,0 +1,30 @@
+
+{
+    "hmisApp": {
+        "state" : {
+            "home": {
+                "title": "States",
+                "createLabel": "Vytvořit State",
+                "createOrEditLabel": "Vytvořit nebo upravit State"
+            },
+            "created": "Byl vytvořen potomek entity State s identifikátorem {{ param }}",
+            "updated": "Potomek entity State s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity State s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat State {{ id }}?"
+            },
+            "detail": {
+                "title": "State"
+            },
+            "name": "Name",
+            "regionalName": "Regional Name",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createby": "Createby",
+            "updatedate": "Updatedate",
+            "updateby": "Updateby",
+            "country": "Country"
+        }
+    }
+}

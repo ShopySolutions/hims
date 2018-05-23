@@ -1,0 +1,38 @@
+
+{
+    "hmisApp": {
+        "house" : {
+            "home": {
+                "title": "Houses",
+                "createLabel": "Lisa uus House",
+                "createOrEditLabel": "Lisa või muuda House"
+            },
+            "created": "Uus House on loodud identifikaatoriga {{ param }}",
+            "updated": "House identifikaatoriga {{ param }} on muudetud",
+            "deleted": "House identifikaatoriga {{ param }} on kustutatud",
+            "delete": {
+                "question": "Kas olete kindel, et soovite kustutada House {{ id }}?"
+            },
+            "detail": {
+                "title": "House"
+            },
+            "houseName": "House Name",
+            "houseNo": "House No",
+            "address": "Address",
+            "houseToFloorNo": "House To Floor No",
+            "ownToFloorNo": "Own To Floor No",
+            "lat": "Lat",
+            "lon": "Lon",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "image": "Image",
+            "country": "Country",
+            "state": "State",
+            "city": "City",
+            "profile": "Profile",
+            "user": "User"
+        }
+    }
+}

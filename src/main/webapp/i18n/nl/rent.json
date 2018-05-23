@@ -1,0 +1,30 @@
+
+{
+    "hmisApp": {
+        "rent" : {
+            "home": {
+                "title": "Rents",
+                "createLabel": "Maak een nieuwe Rent",
+                "createOrEditLabel": "Maak of wijzig een Rent"
+            },
+            "created": "A new Rent is created with identifier {{ param }}",
+            "updated": "A Rent is updated with identifier {{ param }}",
+            "deleted": "A Rent is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u Rent {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "Rent"
+            },
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor",
+            "flat": "Flat"
+        }
+    }
+}

@@ -1,0 +1,78 @@
+<div>
+    <h2 data-translate="hmisApp.floor.home.title">Floors</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="floor.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="hmisApp.floor.home.createLabel">
+                        Create new Floor
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="floorNo"><span data-translate="hmisApp.floor.floorNo">Floor No</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="totalFlat"><span data-translate="hmisApp.floor.totalFlat">Total Flat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="createdate"><span data-translate="hmisApp.floor.createdate">Createdate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createBy"><span data-translate="hmisApp.floor.createBy">Create By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="updateDate"><span data-translate="hmisApp.floor.updateDate">Update Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="updateBy"><span data-translate="hmisApp.floor.updateBy">Update By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="profile.firstName"><span data-translate="hmisApp.floor.profile">Profile</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="user.login"><span data-translate="hmisApp.floor.user">User</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <th jh-sort-by="house.houseName"><span data-translate="hmisApp.floor.house">House</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="floor in vm.floors track by floor.id">
+                    <td><a ui-sref="floor-detail({id:floor.id})">{{$index+1}}</a></td>
+                    <td>{{floor.floorNo}}</td>
+                    <td>{{floor.totalFlat}}</td>
+                        <!--<td>{{floor.createdate | date:'mediumDate'}}</td>
+                    <td>{{floor.createBy}}</td>
+                        <td>{{floor.updateDate | date:'mediumDate'}}</td>
+                    <td>{{floor.updateBy}}</td>-->
+                    <!--<td>
+                        <a ui-sref="profile-detail({id:floor.profile.id})">{{floor.profile.firstName}}</a>
+                    </td>
+                    <td>
+                        {{floor.user.login}}
+                    </td>-->
+                    <td>
+                        <a ui-sref="house-detail({id:floor.house.id})">{{floor.house.houseName}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="floor-detail({id:floor.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="floor.edit({id:floor.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="floor.delete({id:floor.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

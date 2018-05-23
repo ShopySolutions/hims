@@ -1,0 +1,40 @@
+
+{
+    "hmisApp": {
+        "profile" : {
+            "home": {
+                "title": "Profiles",
+                "createLabel": "Ստեղծել նոր Profile",
+                "createOrEditLabel": "Ստեղծել կամ փոփոխել Profile"
+            },
+            "created": "Նոր Profile ստեղծված է {{ param }} նունացուցիչով",
+            "updated": "Profile թարմացվաց է {{ param }} նունացուցիչով",
+            "deleted": "Profile հեռացված է {{ param }}  նունացուցիչով",
+            "delete": {
+                "question": "Դուք վստահ ե՞ք, որ ցանկանում եք հեռացնել Profile {{ id }}?"
+            },
+            "detail": {
+                "title": "Profile"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "mobileNo": "Mobile No",
+            "telephoneNo": "Telephone No",
+            "email": "Email",
+            "nidOrPassportNo": "Nid Or Passport No",
+            "address": "Address",
+            "gender": "Gender",
+            "religion": "Religion",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profileImage": "Profile Image",
+            "nidOrPassport": "Nid Or Passport",
+            "country": "Country",
+            "state": "State",
+            "city": "City",
+            "user": "User"
+        }
+    }
+}

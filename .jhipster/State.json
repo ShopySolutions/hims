@@ -1,0 +1,60 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "country",
+            "otherEntityName": "country",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "regionalName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lat",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lon",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "createby",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "updatedate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "updateby",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20180309134259",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "state",
+    "jpaMetamodelFiltering": false,
+    "pagination": "infinite-scroll"
+}

@@ -1,0 +1,40 @@
+
+{
+    "hmisApp": {
+        "profile" : {
+            "home": {
+                "title": "Profiles",
+                "createLabel": "Maak een nieuwe Profile",
+                "createOrEditLabel": "Maak of wijzig een Profile"
+            },
+            "created": "A new Profile is created with identifier {{ param }}",
+            "updated": "A Profile is updated with identifier {{ param }}",
+            "deleted": "A Profile is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u Profile {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "Profile"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "mobileNo": "Mobile No",
+            "telephoneNo": "Telephone No",
+            "email": "Email",
+            "nidOrPassportNo": "Nid Or Passport No",
+            "address": "Address",
+            "gender": "Gender",
+            "religion": "Religion",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profileImage": "Profile Image",
+            "nidOrPassport": "Nid Or Passport",
+            "country": "Country",
+            "state": "State",
+            "city": "City",
+            "user": "User"
+        }
+    }
+}

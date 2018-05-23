@@ -1,0 +1,142 @@
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title" id="myStateLabel" data-translate="hmisApp.state.home.createOrEditLabel">Create or edit a
+            State</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <!-- <div class=" form-group col-sm-6  col-md-6  col-lg-6" ng-show="vm.state.id">
+             <label for="id" data-translate="global.field.id">ID</label>
+             <input type="text" class="form-control" id="id" name="id"
+                     ng-model="vm.state.id" readonly />
+         </div>-->
+        <div class=" form-group col-sm-6">
+            <div class="form-group">
+                <label data-translate="hmisApp.state.country" for="field_country">Country</label>
+                <select class="form-control js-example-basic-single" id="field_country" name="country" ng-model="vm.state.country"
+                        ng-options="country as country.name for country in vm.countries track by country.id" required>
+                </select>
+
+                <!--<div ng-show="editForm.country.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.country.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class=" form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.state.name" for="field_name">Name</label>
+                <input type="text" class="form-control" name="name" id="field_name"
+                       ng-model="vm.state.name"
+                       required/>
+
+                <!-- <div ng-show="editForm.name.$invalid">
+                     <p class="help-block"
+                        ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
+                         This field is required.
+                     </p>
+                 </div>-->
+            </div>
+        </div>
+        <div class=" form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.state.regionalName" for="field_regionalName">Regional
+                    Name</label>
+                <input type="text" class="form-control" name="regionalName" id="field_regionalName"
+                       ng-model="vm.state.regionalName"
+                       required/>
+
+                <!-- <div ng-show="editForm.regionalName.$invalid">
+                     <p class="help-block"
+                        ng-show="editForm.regionalName.$error.required" data-translate="entity.validation.required">
+                         This field is required.
+                     </p>
+                 </div>-->
+            </div>
+        </div>
+
+        <div class=" form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.state.lat" for="field_lat">Lat</label>
+                <input type="text" class="form-control" name="lat" id="field_lat"
+                       ng-model="vm.state.lat"
+                />
+            </div>
+        </div>
+        <div class=" form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.state.lon" for="field_lon">Lon</label>
+                <input type="text" class="form-control" name="lon" id="field_lon"
+                       ng-model="vm.state.lon"
+                />
+            </div>
+        </div>
+        <!--<div class=" form-group col-sm-6  col-md-6  col-lg-6">
+            <label class="control-label" data-translate="hmisApp.state.createdate" for="field_createdate">Createdate</label>
+
+            <div class="input-group">
+                <input id="field_createdate" type="text" class="form-control" name="createdate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.state.createdate" is-open="vm.datePickerOpenStatus.createdate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+            </div>
+        </div>
+        <div class=" form-group col-sm-6  col-md-6  col-lg-6">
+            <label class="control-label" data-translate="hmisApp.state.createby" for="field_createby">Createby</label>
+            <input type="number" class="form-control" name="createby" id="field_createby"
+                   ng-model="vm.state.createby"
+                />
+        </div>
+        <div class=" form-group col-sm-6  col-md-6  col-lg-6">
+            <label class="control-label" data-translate="hmisApp.state.updatedate" for="field_updatedate">Updatedate</label>
+
+            <div class="input-group">
+                <input id="field_updatedate" type="text" class="form-control" name="updatedate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.state.updatedate" is-open="vm.datePickerOpenStatus.updatedate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('updatedate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+            </div>
+        </div>
+        <div class=" form-group col-sm-6  col-md-6  col-lg-6">
+            <label class="control-label" data-translate="hmisApp.state.updateby" for="field_updateby">Updateby</label>
+            <input type="number" class="form-control" name="updateby" id="field_updateby"
+                   ng-model="vm.state.updateby"
+                />
+        </div>-->
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <h6 class="control-label" translate="hmisApp.state.status">Status</h6>
+                <div>
+                    <label class="radio-inline btn btn-default"><input type="radio" name="status" value="true"
+                                                                       ng-checked="(vm.state.status == true || vm.state.status == null)"
+                                                                       ng-model="vm.state.status"><span
+                        translate="entity.action.active">Active</span></label>&nbsp;&nbsp;
+
+                    <label class="radio-inline btn btn-default"><input type="radio" name="status" value="false"
+                                                                       ng-checked="vm.state.status == false && vm.state.status != null"
+                                                                       ng-model="vm.state.status"><span
+                        translate="entity.action.deactivate">Deactive</span></label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span
+            data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

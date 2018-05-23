@@ -1,0 +1,30 @@
+
+{
+    "hmisApp": {
+        "floor" : {
+            "home": {
+                "title": "Floors",
+                "createLabel": "创建新 Floor",
+                "createOrEditLabel": "创建或编辑 Floor"
+            },
+            "created": "Floor {{ param }} 创建成功",
+            "updated": "Floor {{ param }} 更新成功",
+            "deleted": "Floor {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Floor {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Floor"
+            },
+            "floorNo": "Floor No",
+            "totalFlat": "Total Flat",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House"
+        }
+    }
+}

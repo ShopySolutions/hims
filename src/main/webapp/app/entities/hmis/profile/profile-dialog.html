@@ -1,0 +1,343 @@
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;
+        </button>
+        <h4 class="modal-title" id="myProfileLabel" data-translate="hmisApp.profile.home.createOrEditLabel">Create or
+            edit a Profile</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <!-- <div class="form-group" ng-show="vm.profile.id">
+             <label for="id" data-translate="global.field.id">ID</label>
+             <input type="text" class="form-control" id="id" name="id"
+                     ng-model="vm.profile.id" readonly />
+         </div>-->
+
+        <!--<div class="form-group col-sm-6">
+            <div class="form-group">
+                <label data-translate="hmisApp.profile.user" for="field_user">User</label>
+                <select class="form-control" id="field_user" name="user" ng-model="vm.profile.user"
+                        ng-options="user as user.login for user in vm.users track by user.id" required>
+                </select>
+            </div>
+        </div>-->
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.profile.firstName" for="field_firstName">First
+                    Name</label>
+                <input type="text" class="form-control" name="firstName" id="field_firstName"
+                       ng-model="vm.profile.firstName"
+                       required/>
+                <!--<div ng-show="editForm.firstName.$invalid">-->
+                <!--<p class="help-block"-->
+                <!--ng-show="editForm.firstName.$error.required" data-translate="entity.validation.required">-->
+                <!--This field is required.-->
+                <!--</p>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.profile.lastName" for="field_lastName">Last
+                    Name</label>
+                <input type="text" class="form-control" name="lastName" id="field_lastName"
+                       ng-model="vm.profile.lastName"
+                       required/>
+                <!--<div ng-show="editForm.lastName.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.lastName.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group" ngf-drop ngf-change="vm.setProfileImage($file, vm.profile)" ngf-pattern="'image/*'">
+                <label class="control-label" data-translate="hmisApp.profile.profileImage" for="field_profileImage">Profile
+                    Image</label>
+                <div>
+                    <img
+                        data-ng-src="{{'data:' + vm.profile.profileImageContentType + ';base64,' + vm.profile.profileImage}}"
+                        style="max-height: 100px;" ng-if="vm.profile.profileImage" alt="profile image"/>
+                    <div ng-if="vm.profile.profileImage" class="help-block clearfix">
+                        <span class="pull-left">{{vm.profile.profileImageContentType}}, {{vm.byteSize(vm.profile.profileImage)}}</span>
+                        <button type="button"
+                                ng-click="vm.profile.profileImage=null;vm.profile.profileImageContentType=null;"
+                                class="btn btn-default btn-xs pull-right">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                    <button type="button" ngf-select class="btn btn-default btn-block"
+                            ngf-change="vm.setProfileImage($file, vm.profile)" accept="image/*"
+                            data-translate="entity.action.addimage">
+                        Add image
+                    </button>
+                </div>
+                <input type="hidden" class="form-control" name="profileImage" id="field_profileImage"
+                       ng-model="vm.profile.profileImage"
+                       required/>
+                <input type="hidden" class="form-control" name="profileImageContentType"
+                       id="field_profileImageContentType"
+                       ng-model="vm.profile.profileImageContentType"/>
+                <!--<div ng-show="editForm.profileImage.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.profileImage.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.profile.mobileNo" for="field_mobileNo">Mobile
+                    No</label>
+                <input type="text" class="form-control" name="mobileNo" id="field_mobileNo"
+                       ng-model="vm.profile.mobileNo"
+                       required/>
+                <!--<div ng-show="editForm.mobileNo.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.mobileNo.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.profile.telephoneNo" for="field_telephoneNo">Telephone
+                    No</label>
+                <input type="text" class="form-control" name="telephoneNo" id="field_telephoneNo"
+                       ng-model="vm.profile.telephoneNo"
+                />
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.profile.email" for="field_email">Email</label>
+                <input type="text" class="form-control" name="email" id="field_email"
+                       ng-model="vm.profile.email"
+                       required/>
+                <!--<div ng-show="editForm.email.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.email.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.profile.gender" for="field_gender">Gender</label>
+                <input type="text" class="form-control" name="gender" id="field_gender"
+                       ng-model="vm.profile.gender"
+                       required/>
+                <!--<div ng-show="editForm.gender.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.gender.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.profile.religion"
+                       for="field_religion">Religion</label>
+                <input type="text" class="form-control" name="religion" id="field_religion"
+                       ng-model="vm.profile.religion"
+                       required/>
+                <!--<div ng-show="editForm.religion.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.religion.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.profile.nidOrPassportNo"
+                       for="field_nidOrPassportNo">Nid
+                    Or Passport No</label>
+                <input type="text" class="form-control" name="nidOrPassportNo" id="field_nidOrPassportNo"
+                       ng-model="vm.profile.nidOrPassportNo"
+                       required/>
+                <!--<div ng-show="editForm.nidOrPassportNo.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.nidOrPassportNo.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+
+            <div class="form-group" ngf-drop ngf-change="vm.setNidOrPassport($file, vm.profile)"
+                 ngf-pattern="'image/*'">
+                <label class="control-label" data-translate="hmisApp.profile.nidOrPassport" for="field_nidOrPassport">Nid
+                    Or
+                    Passport</label>
+                <div>
+                    <img
+                        data-ng-src="{{'data:' + vm.profile.nidOrPassportContentType + ';base64,' + vm.profile.nidOrPassport}}"
+                        style="max-height: 100px;" ng-if="vm.profile.nidOrPassport" alt="profile image"/>
+                    <div ng-if="vm.profile.nidOrPassport" class="help-block clearfix">
+                        <span class="pull-left">{{vm.profile.nidOrPassportContentType}}, {{vm.byteSize(vm.profile.nidOrPassport)}}</span>
+                        <button type="button"
+                                ng-click="vm.profile.nidOrPassport=null;vm.profile.nidOrPassportContentType=null;"
+                                class="btn btn-default btn-xs pull-right">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                    <button type="button" ngf-select class="btn btn-default btn-block"
+                            ngf-change="vm.setNidOrPassport($file, vm.profile)" accept="image/*"
+                            data-translate="entity.action.addimage">
+                        Add image
+                    </button>
+                </div>
+                <input type="hidden" class="form-control" name="nidOrPassport" id="field_nidOrPassport"
+                       ng-model="vm.profile.nidOrPassport"
+                />
+                <input type="hidden" class="form-control" name="nidOrPassportContentType"
+                       id="field_nidOrPassportContentType"
+                       ng-model="vm.profile.nidOrPassportContentType"/>
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+
+            <div class="form-group">
+                <label class="control-label" data-translate="hmisApp.profile.address"
+                       for="field_address">Address</label>
+                <input type="text" class="form-control" name="address" id="field_address"
+                       ng-model="vm.profile.address"
+                       required/>
+                <!--<div ng-show="editForm.address.$invalid">
+                    <p class="help-block"
+                       ng-show="editForm.address.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                </div>-->
+            </div>
+        </div>
+        <!--<div class="form-group">
+            <label class="control-label" data-translate="hmisApp.profile.createdate" for="field_createdate">Createdate</label>
+                <div class="input-group">
+                    <input id="field_createdate" type="text" class="form-control" name="createdate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.profile.createdate" is-open="vm.datePickerOpenStatus.createdate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="hmisApp.profile.createBy" for="field_createBy">Create By</label>
+            <input type="number" class="form-control" name="createBy" id="field_createBy"
+                    ng-model="vm.profile.createBy"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="hmisApp.profile.updateDate" for="field_updateDate">Update Date</label>
+                <div class="input-group">
+                    <input id="field_updateDate" type="text" class="form-control" name="updateDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.profile.updateDate" is-open="vm.datePickerOpenStatus.updateDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('updateDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="hmisApp.profile.updateBy" for="field_updateBy">Update By</label>
+            <input type="number" class="form-control" name="updateBy" id="field_updateBy"
+                    ng-model="vm.profile.updateBy"
+                    />
+        </div>-->
+
+        <div class="form-group col-sm-6">
+
+            <div class="form-group">
+                <label data-translate="hmisApp.profile.country" for="field_country">Country</label>
+                <select class="form-control" id="field_country" name="country"
+                        ng-model="vm.profile.country"
+                        ng-change="getStateByCountry(vm.profile.country.id)"
+                        ng-options="country as country.name for country in vm.countries track by country.id" required>
+                </select>
+            </div>
+            <!--<div ng-show="editForm.country.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.country.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>-->
+        </div>
+        <div class="form-group col-sm-6">
+
+            <div class="form-group">
+                <label data-translate="hmisApp.profile.state" for="field_state">State</label>
+                <select class="form-control" id="field_state" name="state"
+                        ng-model="vm.profile.state"
+                        ng-change="getCityByState(vm.profile.state.id)"
+                        ng-disabled="!(vm.profile.country)"
+                        ng-options="state as state.name for state in vm.states track by state.id" required>
+                </select>
+            </div>
+            <!-- <div ng-show="editForm.state.$invalid">
+                 <p class="help-block"
+                    ng-show="editForm.state.$error.required" data-translate="entity.validation.required">
+                     This field is required.
+                 </p>
+             </div>-->
+        </div>
+        <div class="form-group col-sm-6">
+
+            <div class="form-group">
+                <label data-translate="hmisApp.profile.city" for="field_city">City</label>
+                <select class="form-control" id="field_city" name="city" ng-model="vm.profile.city"
+                        ng-disabled="!(vm.profile.state)"
+                        ng-options="city as city.name for city in vm.cities track by city.id" required>
+                </select>
+            </div>
+            <!--<div ng-show="editForm.city.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.city.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>-->
+        </div>
+        <!--<div ng-show="editForm.user.$invalid">
+            <p class="help-block"
+                ng-show="editForm.user.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>-->
+        <div class="col-md-6">
+            <div class="form-group">
+                <h6 class="control-label" translate="hmisApp.profile.status">Status</h6>
+                <div>
+                    <label class="radio-inline btn btn-default"><input type="radio" name="status" value="true"
+                                                                       ng-checked="(vm.profile.status == true || vm.profile.status == null)"
+                                                                       ng-model="vm.profile.status"><span
+                        translate="entity.action.active">Active</span></label>&nbsp;&nbsp;
+
+                    <label class="radio-inline btn btn-default"><input type="radio" name="status" value="false"
+                                                                       ng-checked="vm.profile.status == false && vm.profile.status != null"
+                                                                       ng-model="vm.profile.status"><span
+                        translate="entity.action.deactivate">Deactive</span></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span
+            data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

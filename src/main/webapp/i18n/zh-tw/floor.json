@@ -1,0 +1,30 @@
+
+{
+    "hmisApp": {
+        "floor" : {
+            "home": {
+                "title": "Floors",
+                "createLabel": "建立一筆新的 Floor",
+                "createOrEditLabel": "建立或編輯 Floor"
+            },
+            "created": "新的 Floor 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Floor 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Floor 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Floor {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Floor"
+            },
+            "floorNo": "Floor No",
+            "totalFlat": "Total Flat",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House"
+        }
+    }
+}

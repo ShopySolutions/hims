@@ -1,0 +1,61 @@
+
+<div>
+    <h2><span data-translate="hmisApp.city.detail.title">City</span> {{vm.city.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="hmisApp.city.name">Name</span></dt>
+        <dd>
+            <span>{{vm.city.name}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.city.regionalName">Regional Name</span></dt>
+        <dd>
+            <span>{{vm.city.regionalName}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.city.country">Country</span></dt>
+        <dd>
+            <a ui-sref="country-detail({id:vm.city.country.id})">{{vm.city.country.name}}</a>
+        </dd>
+        <dt><span data-translate="hmisApp.city.state">State</span></dt>
+        <dd>
+            <a ui-sref="state-detail({id:vm.city.state.id})">{{vm.city.state.name}}</a>
+        </dd>
+
+        <dt><span data-translate="hmisApp.city.lat">Lat</span></dt>
+        <dd>
+            <span>{{vm.city.lat}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.city.lon">Lon</span></dt>
+        <dd>
+            <span>{{vm.city.lon}}</span>
+        </dd>
+       <!-- <dt><span data-translate="hmisApp.city.createdate">Createdate</span></dt>
+        <dd>
+            <span>{{vm.city.createdate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.city.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.city.createBy}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.city.updateDate">Update Date</span></dt>
+        <dd>
+            <span>{{vm.city.updateDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="hmisApp.city.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{vm.city.updateBy}}</span>
+        </dd>-->
+
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="city-detail.edit({id:vm.city.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

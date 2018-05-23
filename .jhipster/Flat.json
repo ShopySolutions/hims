@@ -1,0 +1,144 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "profile",
+            "otherEntityName": "profile",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "firstName",
+            "otherEntityRelationshipName": "profile"
+        },
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "user"
+        },
+        {
+            "relationshipName": "house",
+            "otherEntityName": "house",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "houseName",
+            "otherEntityRelationshipName": "house"
+        },
+        {
+            "relationshipName": "floor",
+            "otherEntityName": "floor",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "floorNo",
+            "otherEntityRelationshipName": "floor"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "flatNameOrNo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "flatSize",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },{
+            "fieldName": "totalBedRoom",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },{
+            "fieldName": "drawDinDraCumDin",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },{
+            "fieldName": "totalWashroom",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },{
+            "fieldName": "kitchen",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },{
+            "fieldName": "totalBelcony",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },{
+            "fieldName": "storeRoom",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },{
+            "fieldName": "floorType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },{
+            "fieldName": "flatFair",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },{
+            "fieldName": "serviceCharge",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },{
+            "fieldName": "totalFair",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "createdate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "createBy",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "updateDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "updateBy",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20180317081654",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "flat",
+    "jpaMetamodelFiltering": false,
+    "pagination": "infinite-scroll"
+}

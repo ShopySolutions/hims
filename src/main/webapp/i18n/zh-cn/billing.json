@@ -1,0 +1,36 @@
+
+{
+    "hmisApp": {
+        "billing" : {
+            "home": {
+                "title": "Billings",
+                "createLabel": "创建新 Billing",
+                "createOrEditLabel": "创建或编辑 Billing"
+            },
+            "created": "Billing {{ param }} 创建成功",
+            "updated": "Billing {{ param }} 更新成功",
+            "deleted": "Billing {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Billing {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Billing"
+            },
+            "flatFair": "Flat Fair",
+            "electricityBill": "Electricity Bill",
+            "gasBill": "Gas Bill",
+            "internetBill": "Internet Bill",
+            "transactionId": "Transaction Id",
+            "createdate": "Createdate",
+            "createBy": "Create By",
+            "updateDate": "Update Date",
+            "updateBy": "Update By",
+            "profile": "Profile",
+            "user": "User",
+            "house": "House",
+            "floor": "Floor",
+            "flat": "Flat",
+            "rent": "Rent"
+        }
+    }
+}

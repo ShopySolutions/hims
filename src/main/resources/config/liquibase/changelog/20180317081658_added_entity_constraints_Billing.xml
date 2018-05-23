@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Billing.
+    -->
+    <changeSet id="20180317081658-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="profile_id"
+                                 baseTableName="billing"
+                                 constraintName="fk_billing_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="profile"/>
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="billing"
+                                 constraintName="fk_billing_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="house_id"
+                                 baseTableName="billing"
+                                 constraintName="fk_billing_house_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="house"/>
+
+        <addForeignKeyConstraint baseColumnNames="floor_id"
+                                 baseTableName="billing"
+                                 constraintName="fk_billing_floor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="floor"/>
+
+        <addForeignKeyConstraint baseColumnNames="flat_id"
+                                 baseTableName="billing"
+                                 constraintName="fk_billing_flat_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="flat"/>
+
+        <addForeignKeyConstraint baseColumnNames="rent_id"
+                                 baseTableName="billing"
+                                 constraintName="fk_billing_rent_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rent"/>
+
+    </changeSet>
+</databaseChangeLog>

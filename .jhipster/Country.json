@@ -1,0 +1,52 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "pattern"
+            ],
+            "fieldValidateRulesPattern": "^[a-zA-Z0-9]*$"
+        },
+        {
+            "fieldName": "regionalName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lat",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lon",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "createby",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "updatedate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "updateby",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20180309131028",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "country",
+    "jpaMetamodelFiltering": false,
+    "pagination": "infinite-scroll"
+}
